@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookNest Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1> BookNest</h1>
+    <p>Your Knowledge, Your Library</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#books">Books</a>
+      <a href="#account">My Account</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Discover Your Next Favourite Book</h2>
+    <p>Read, Learn and Grow with BookNest Library.</p>
+  </section>
+
+  <section id="account" class="panel">
+    <h2>Reader Account</h2>
+    <input id="name" placeholder="Enter your name">
+    <input id="email" type="email" placeholder="Enter your email">
+    <button onclick="login()">Register / Login</button>
+    <p id="welcome"></p>
+  </section>
+
+  <section id="books">
+    <h2>Explore Our Collection</h2>
+    <input id="search" placeholder="Search books..."
+           oninput="showBooks()">
+    <select id="category" onchange="showBooks()">
+      <option value="All">All Categories</option>
+      <option>Computer Technology</option>
+      <option>Information Technology</option>
+      <option>Mechanical</option>
+      <option>Civil</option>
+      <option>Electrical</option>
+      <option>Competitive Exams</option>
+      <option>Literature</option>
+      <option>Philosophy</option>
+      <option>Novels</option>
+    </select>
+    <div id="bookList" class="books"></div>
+  </section>
+
+  <section class="panel">
+    <h2>My Issued Books</h2>
+    <div id="issued"></div>
+  </section>
+
+  <footer>© 2026 BookNest Library | Read. Learn. Inspire.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

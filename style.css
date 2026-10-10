@@ -1,0 +1,332 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #145c43;
+  --dark: #103c30;
+  --lime: #d8f27a;
+  --cream: #faf8f1;
+  --white: #ffffff;
+  --text: #24372f;
+  --muted: #748078;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--dark);
+  color: white;
+  padding: 25px 7%;
+  text-align: left;
+  border-bottom: 4px solid var(--lime);
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+header p {
+  color: #c5d8cc;
+  margin: 3px 0 18px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 9px 17px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--lime);
+  color: var(--dark);
+}
+
+.hero {
+  margin: 28px auto;
+  width: 90%;
+  padding: 75px 25px;
+  text-align: left;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #dcefdc, #f4edcf);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  max-width: 650px;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+.hero p {
+  margin-top: 18px;
+  color: #53665a;
+  font-size: 16px;
+}
+
+section {
+  padding: 32px 7%;
+}
+
+section h2 {
+  font-size: 27px;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  background: white;
+  border: 1px solid #dce4dc;
+  padding: 13px 16px;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  margin: 6px;
+  max-width: 100%;
+  transition: 0.25s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #145c4315;
+}
+
+button {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 11px;
+  padding: 12px 19px;
+  margin: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px #103c3025;
+}
+
+.panel {
+  background: white;
+  margin: 28px auto;
+  width: 86%;
+  padding: 28px;
+  border: 1px solid #e9ede6;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #26372f08;
+  text-align: left;
+}
+
+#welcome {
+  color: var(--green);
+  font-weight: 600;
+  margin: 10px;
+}
+
+#books {
+  text-align: center;
+}
+
+#books h2 {
+  font-size: 32px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.book {
+  background: white;
+  border: 1px solid #e9ede6;
+  border-radius: 20px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px #26372f09;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #174c3c18;
+}
+
+.book .cover {
+  min-height: 165px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #d9edc9, #a8cbb0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 -6px 0 #174c3c0d;
+}
+
+.book:nth-child(3n+2) .cover {
+  background: linear-gradient(145deg, #f7dfad, #edb985);
+}
+
+.book:nth-child(3n) .cover {
+  background: linear-gradient(145deg, #e7d9f6, #b8a7dc);
+}
+
+.book h3 {
+  color: var(--dark);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.book p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.book .tag {
+  display: inline-block;
+  background: #edf5e9;
+  color: var(--green);
+  border-radius: 30px;
+  padding: 6px 12px;
+  margin: 8px 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.book button {
+  width: 100%;
+  margin: 12px 0 0;
+}
+
+#issued p {
+  background: #f5f8f2;
+  border: 1px solid #e3eade;
+  border-left: 4px solid var(--green);
+  padding: 18px;
+  margin: 14px 0;
+  border-radius: 12px;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+
+#issued b {
+  color: var(--dark);
+  font-size: 16px;
+}
+
+footer {
+  background: var(--dark);
+  color: #dce8df;
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: 35px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 22px;
+  }
+
+  header h1 {
+    font-size: 27px;
+  }
+
+  nav {
+    gap: 4px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    width: 92%;
+    padding: 45px 22px;
+    margin: 18px auto;
+  }
+
+  section {
+    padding: 22px 5%;
+  }
+
+  section h2,
+  #books h2 {
+    font-size: 24px;
+  }
+
+  .panel {
+    width: 92%;
+    padding: 20px 14px;
+  }
+
+  input,
+  select {
+    width: calc(100% - 12px);
+  }
+
+  .books {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .book {
+    padding: 11px;
+    border-radius: 15px;
+  }
+
+  .book .cover {
+    min-height: 110px;
+    font-size: 43px;
+  }
+
+  .book h3 {
+    font-size: 14px;
+  }
+
+  .book .tag {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .book button {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+}
+
